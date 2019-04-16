@@ -1,0 +1,105 @@
+.header
+  background-color: #fff
+  box-shadow: 0 3px 3px rgba(0,0,0,0.05)
+  left: 0
+  opacity: 1
+  position: fixed
+  top: 0
+  transition: opacity 0.7s, top 0.7s
+  width: 100%
+  z-index: 10
+
+  &.hidden
+    opacity: 0
+    top: -100%
+
+  &__top
+    background-color: #2C405A
+    display: none
+    font-size: 14px
+    line-height: 50px
+    min-height: 50px
+
+    @media(min-width: 768px)
+      display: block
+      position: relative
+      z-index: 2
+
+    @media(min-width: 1900px)
+      font-size: 18px
+
+  &__top-inner
+    align-items: center
+    display: flex
+    justify-content: flex-end
+
+  &__top-link
+    color: #fff
+    margin-right: 30px
+    text-decoration: none
+
+    @media(max-width: 1199px)
+      text-decoration: underline
+
+    @media(min-width: 1200px)
+      margin-right: 45px
+
+    @media(min-width: 1900px)
+      margin-right: 60px
+
+    &:last-child
+      margin-right: 0
+
+    &--phone
+      font-weight: 700
+
+    &:hover
+      color: #fff
+      text-decoration: underline
+
+  &__bottom
+    background-color: #fff
+    min-height: 55px
+    position: relative
+    z-index: 1
+
+    @media(min-width: 992px)
+      background-color: #fafafa
+      border-bottom: 1px solid #ccc
+
+  &__bottom-inner
+    align-items: stretch
+    display: flex
+    justify-content: space-between
+    min-height: 55px
+
+    &::before
+      display: none
+
+    &::after
+      background-color: #fff
+      content: ''
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 1
+
+      @media(min-width: 992px)
+        display: none
+
+.logo
+  align-items: center
+  display: flex
+  width: 68px
+  z-index: 100
+
+  @media(min-width: 992px)
+    width: 84px
+
+  @media(min-width: 1600px)
+    width: 120px
+
+  @media(min-width: 1900px)
+    width: 180px

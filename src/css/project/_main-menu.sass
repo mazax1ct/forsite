@@ -1,0 +1,259 @@
+.menu-opener
+  background-color: transparent
+  border: none
+  cursor: pointer
+  height: 50px
+  left: auto
+  padding: 0
+  position: absolute
+  right: 5px
+  text-align: center
+  top: 50%
+  transform: translateY(-50%)
+  width: 50px
+  z-index: 2
+
+  @media (min-width: 992px)
+    display: none
+
+  span
+    background-color: #2C405A
+    display: inline-block
+    height: 3px
+    position: relative
+    vertical-align: middle
+    width: 30px
+
+    &::after,
+    &::before
+      background-color: #2C405A
+      content: ""
+      height: 3px
+      left: 0
+      position: absolute
+      width: 30px
+
+    &::before
+      top: -8px
+
+    &::after
+      top: 8px
+
+  &.is-active
+    z-index: 100
+
+    span
+      transform: rotate(45deg)
+
+      &::before
+        top: 0
+        transform: rotate(-90deg)
+
+      &::after
+        display: none
+
+.main-menu-block
+  @media(min-width: 992px)
+    align-items: center
+    display: flex
+    margin-left: auto
+    margin-right: auto
+
+  @media(min-width: 1400px)
+    margin-right: 0
+
+.main-menu
+  align-items: stretch
+  display: none
+  height: 100%
+  left: 0
+  margin-bottom: 0
+  overflow-y: auto
+  position: fixed
+  padding-left: 0
+  padding-top: 60px
+  top: 0
+  width: 100%
+  z-index: 1
+
+  &.is-open
+    background-color: #fff
+    display: block
+
+    @media(min-width: 992px)
+      background: none
+      display: flex
+      min-height: auto
+
+      padding-top: 0
+
+  @media(min-width: 768px)
+    padding-top: 115px
+
+  @media(min-width: 992px)
+    display: flex
+    font-size: 16px
+    font-weight: 500
+    left: auto
+    overflow-y: visible
+    position: static
+    padding-top: 0
+    top: auto
+    text-align: left
+    z-index: 2
+
+  @media(min-width: 1200px)
+    font-size: 18px
+
+  @media(min-width: 1400px)
+    font-size: 20px
+
+  @media(min-width: 1900px)
+    font-size: 28px
+
+  &__item
+    margin-bottom: 0
+
+    @media(min-width: 992px)
+      align-items: stretch
+      display: flex
+      margin-left: 40px
+
+    @media(min-width: 1200px)
+      margin-left: 60px
+
+    @media(min-width: 1900px)
+      margin-left: 80px
+
+    &:first-child
+      margin-left: 0
+
+    &.is-hover
+      .main-menu__dropdown
+        display: block
+
+    &--duplicate
+      @media(min-width: 768px)
+        display: none
+
+      @media(min-width: 992px)
+        display: none
+
+  &__link
+    color: #2C405A
+    display: block
+    font-weight: 700
+    padding: 12px 20px
+    text-decoration: none
+
+    @media(max-width: 1199px)
+      text-decoration: underline
+
+    @media(min-width: 992px)
+      align-items: center
+      display: flex
+      padding: 24px 0
+
+    @media(min-width: 1600px)
+      padding: 36px 0
+
+    @media(min-width: 1900px)
+      padding: 50px 0
+
+    &:hover
+      color: #2C405A
+      text-decoration: none
+
+  &__dropdown
+    @media(min-width: 992px)
+      background-color: #2C405A
+      display: none
+      left: 0
+      position: absolute
+      padding-bottom: 30px
+      padding-top: 30px
+      top: 100%
+      width: 100%
+      z-index: 1
+
+    @media(min-width: 1900px)
+      padding-top: 50px
+      padding-bottom: 50px
+
+    &.open
+      display: block
+
+  &__dropdown-container
+    @media(min-width: 992px)
+      display: flex
+
+    & + &
+      @media(min-width: 992px)
+        margin-top: 30px
+
+  &__dropdown-list
+    list-style: none
+    padding-left: 0
+
+    @media(min-width: 992px)
+      padding-left: 30px
+      padding-right: 30px
+      width: 33.333%
+
+  &__dropdown-title
+    color: #2C405A
+    font-size: 14px
+    font-weight: 700
+    margin-bottom: 0
+    padding: 12px 20px
+
+    &:first-child
+      padding-left: 20px
+
+      @media(min-width: 992px)
+        padding-left: 0
+
+    @media(min-width: 992px)
+      color: #fff
+      font-size: 16px
+      margin-bottom: 15px
+      padding: 0
+
+    @media(min-width: 1200px)
+      font-size: 18px
+
+    @media(min-width: 1900px)
+      font-size: 28px
+
+    a
+      color: inherit
+
+      @media(max-width: 1199px)
+        text-decoration: underline
+
+  &__dropdown-link
+    color: #2C405A
+    display: block
+    padding: 12px 40px
+
+    @media(max-width: 1199px)
+      text-decoration: underline
+
+    @media(min-width: 992px)
+      color: #fff
+      font-size: 14px
+      padding: 5px 0
+      transition: border-color 0.3s
+
+    @media(min-width: 1200px)
+      font-size: 16px
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
+    &:hover
+      color: #2C405A
+      text-decoration: underline
+
+      @media(min-width: 992px)
+        color: #fff

@@ -1,0 +1,145 @@
+html
+  height: 100%
+
+body
+  height: 100%
+
+  &.overflow
+    @media(max-width: 991px)
+      overflow: hidden
+
+.header-fixed-space
+  padding-top: 55px !important
+
+  @media(min-width: 768px)
+    padding-top: 105px !important
+
+  @media(min-width: 992px)
+    padding-top: 124px !important
+
+  @media(min-width: 1400px)
+    padding-top: 130px !important
+
+  @media(min-width: 1600px)
+    padding-top: 154px !important
+
+  @media(min-width: 1900px)
+    padding-top: 195px !important
+
+.container
+  @media(min-width: 1300px)
+    width: 1240px
+
+  @media(min-width: 1400px)
+    width: 1340px
+
+  @media(min-width: 1600px)
+    width: 1560px
+
+.cd-hero-slider
+  .cd-img-container
+    img
+      @media(min-width: 1400px)
+        left: 70%
+
+      @media(min-width: 1600px)
+        left: 80%
+
+.breadcrumbs
+  align-items: center
+  background: none !important
+  display: flex
+  min-height: 50px
+
+  @media(max-width: 767px)
+    display: none
+
+  @media(min-width: 1400px)
+    min-height: 60px
+
+  @media(min-width: 1600px)
+    min-height: 70px
+
+  @media(min-width: 1900px)
+    min-height: 80px
+
+  .container
+    &::before,
+    &::after
+      display: none
+
+.breadcrumb
+  margin-bottom: 0
+  padding: 0
+  top: auto
+
+  @media(min-width: 1900px)
+    font-size: 24px
+
+body
+  .filter-by-block
+    .filter-by-block__title
+      color: #2D2E2E
+      font-size: 20px
+      font-weight: 700
+      margin: 0
+      padding-top: 18px
+      padding-bottom: 18px
+      text-transform: uppercase
+      text-align: left
+
+      @media(min-width: 1900px)
+        font-size: 28px
+        padding-top: 40px
+        padding-bottom: 33px
+
+.filter-results
+  border-bottom: none
+  border-top: none
+  margin-bottom: 0
+  padding-top: 0
+  padding-bottom: 0
+
+.illustration-v2 .product-img-brd,
+.product-description-brd
+  box-shadow: none
+  border: 1px solid #dedede
+
+.illustration-v2 .product-img-brd
+  border-bottom: none
+
+.product-description-brd
+  border-top: none
+
+body
+  .product-description
+    .gender
+      margin-bottom: 15px
+
+.illustration-v2
+  .product-img-brd
+    a
+      width: 100%
+
+body
+  .product-description
+    h4.title-price.big-size
+      font-weight: 700
+      min-height: 2.8em
+      max-height: 2.8em
+
+body .filter-by-block .panel-group h2 a
+  @media(min-width: 1900px)
+    font-size: 20px
+    padding-top: 18px
+    padding-bottom: 18px
+
+body .shop-filters .checkbox-list .checkbox
+  @media(min-width: 1900px)
+    font-size: 16px
+    height: 18px
+    line-height: 18px
+
+body .shop-filters .checkbox-list .checkbox i
+  @media(min-width: 1900px)
+    top: 2px

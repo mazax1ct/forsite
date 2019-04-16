@@ -1,0 +1,57 @@
+.catalog-section
+  margin-bottom: 30px
+
+.product-description
+  .primary-btn,
+  .secondary-btn
+    align-items: center
+    display: flex
+    justify-content: center
+    height: 40px
+    text-align: center
+    transition: background-color 0.3s
+
+    @media(min-width: 1400px)
+      font-size: 20px
+      height: 50px
+
+    @media(min-width: 1900px)
+      height: 60px
+
+    &:hover
+      text-decoration: none
+
+  .primary-btn
+    background-color: #2C405A
+    color: #fff
+    margin-bottom: 5px
+
+    &:hover
+      background-color: #4765a0
+
+  .secondary-btn
+    background-color: #ddd
+    border: 1px solid #707070
+    color: #2D2E2E
+
+    &:hover
+      background-color: #eee
+
+.catalog-auth
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 53px
+  text-align: right
+
+  @media(min-width: 1900px)
+    height: 90px
+
+  p
+    margin-bottom: 0
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
+  a
+    text-decoration: underline
